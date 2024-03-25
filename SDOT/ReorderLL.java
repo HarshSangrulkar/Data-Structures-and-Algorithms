@@ -71,10 +71,13 @@ public class ReorderLL {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        //int n = sc.nextInt();
+        String inputLine = sc.nextLine();
+        String[] tokens = inputLine.split(" ");
         ReorderLL LL1 = new ReorderLL();
-        for(int i=0;i<n;i++){
-            int data=sc.nextInt();
+        for(int i=0;i<tokens.length;i++){
+            int data = Integer.parseInt(tokens[i]);
+            //int data=sc.nextInt();
             LL1.creatLL(data);
         }
         LL1.reorderLL(LL1.head);
